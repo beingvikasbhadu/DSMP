@@ -1,0 +1,12 @@
+from abc import ABC,abstractmethod
+
+
+# now this is an abstract class and it can not be instansiated, cause it have atleast one abstract method
+class A(ABC):
+   @abstractmethod
+   def fun(self):
+     pass
+   # this class can have concrete method 
+   def fun1(self):
+     print("Hello World!")
+   
