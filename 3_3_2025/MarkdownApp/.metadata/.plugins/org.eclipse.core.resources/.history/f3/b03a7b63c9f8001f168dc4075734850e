@@ -1,0 +1,17 @@
+package com.example.URL.Shortener.dao;
+
+import org.springframework.data.repository.RepositoryDefinition;
+
+import com.example.URL.Shortener.entity.URLEntity;
+
+@RepositoryDefinition(domainClass=URLEntity.class, idClass=Integer.class)
+public interface URLDAO {
+    // create 
+	public void save(URLEntity url);
+	// retreival
+	public URLEntity findById(Integer id);
+	// update
+	@Modifying
+	@Query("update from url u set u.shortcode=:shortcode")
+	public URLEntity updateUrl(@Param("shortCode") String shortCode);
+}

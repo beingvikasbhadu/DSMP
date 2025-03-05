@@ -1,0 +1,31 @@
+package com.example.URL.Shortener.service;
+
+import com.example.URL.Shortener.bean.URLBean;
+
+public class URLShortenerServiceImpl implements URLShortenerService {
+
+	@Override
+	public URLBean saveUrlDetail(URLBean bean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public URLBean getUrlDetailById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public URLBean updateUrlDetial(URLBean bean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public URLBean deleteUrlDetail(String url) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

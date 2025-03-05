@@ -1,0 +1,67 @@
+package com.example.URL.Shortener.bean;
+
+import java.util.Date;
+
+public class URLBean {
+	int id;
+	String url;
+	String shortCode;
+	Date createdAt;
+	Date updatedAt;
+	Integer accessCount;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getShortCode() {
+		return shortCode;
+	}
+
+	public void setShortCode(String shortCode) {
+		this.shortCode = shortCode;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+	public Integer getAccessCount() {
+		return accessCount;
+	}
+
+	public void setAccessCount(Integer accessCount) {
+		this.accessCount = accessCount;
+	}
+
+	@Override
+	public String toString() {
+		return "URLBean [url=" + url + ", shortCode=" + shortCode + ", createdAt=" + createdAt + ", updatedAt="
+				+ updatedAt + ", accessCount=" + accessCount + "]";
+	}
+
+}

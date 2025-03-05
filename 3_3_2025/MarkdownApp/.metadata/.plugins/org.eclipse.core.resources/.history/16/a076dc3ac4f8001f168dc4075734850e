@@ -1,0 +1,5 @@
+package com.example.URL.Shortener.entity;
+
+public class URLEntity {
+
+}

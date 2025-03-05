@@ -1,0 +1,34 @@
+package com.example.URL.Shortener.base62;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Base62 {
+	private int base=62;
+	private String characters="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	public String encodeUrl(Integer id)
+	{
+		
+		String encodedUrl="";
+		while(id!=0)
+		{
+			int rem=id%base;
+			id/=62;
+			encodedUrl=encodedUrl+characters.charAt(rem);
+		}
+		return encodedUrl;
+	}
+     
+	public Integer decodeUrl(String url)
+	{
+		int base=62;
+		Integer id=0;
+		
+		for(int i=0;i<url.length();i++)
+		{
+			id+=Integer(Math.pow(base,i))*url.charAt(i);
+		}
+		return id;
+	}
+	
+}

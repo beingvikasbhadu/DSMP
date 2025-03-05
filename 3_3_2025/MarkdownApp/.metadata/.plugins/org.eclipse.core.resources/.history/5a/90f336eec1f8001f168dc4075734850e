@@ -1,0 +1,5 @@
+package com.example.URL.Shortener.bean;
+
+public class URLBean {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.MarkdownApp.DAO.MarkdownAppDAOImpl&apos; to &apos;MarkdownAppDAOWrapper&apos;&#x0D;&#x0A;- Original project: &apos;MarkdownApp&apos;&#x0D;&#x0A;- Original element: &apos;com.example.MarkdownApp.DAO.MarkdownAppDAOImpl&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.MarkdownApp.DAO.MarkdownAppDAOWrapper&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MarkdownAppDAOImpl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.MarkdownApp.DAO{MarkdownAppDAOImpl.java[MarkdownAppDAOImpl" matchStrategy="1" name="MarkdownAppDAOWrapper" qualified="false" references="true" similarDeclarations="false" stamp="1741027811152" textual="false" version="1.0"/>
+</session>

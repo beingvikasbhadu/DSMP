@@ -1,0 +1,24 @@
+package com.example.URL.Shortener.dao;
+
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.RepositoryDefinition;
+import org.springframework.data.repository.query.Param;
+
+
+import com.example.URL.Shortener.entity.URLEntity;
+
+@RepositoryDefinition(domainClass=URLEntity.class, idClass=Integer.class)
+public interface URLDAO {
+    // create 
+	public void save(URLEntity url);
+	
+	// retrieval
+	public Optional<URLEntity> findById(Integer id);
+	
+	public URLEntity findByUrl(String url);
+	
+	@Query("select max(u.id) from URLEntity u")
+	public Integer findLastInsertedId();
+	
+}

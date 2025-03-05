@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\vikas.bhadu\Desktop\Java Full Stack\Day 16\Day16 - 2Dec24\Spring boot\Demo10022_Spring_Boot_Spring_JPA_Queries"/>
+			<item value="C:\Users\vikas.bhadu\Desktop\Java Full Stack\Day 16\Day16 - 2Dec24\Spring boot\Demo_10008_Spring_Boot_Spring_JPA_Repository"/>
+			<item value="C:\Practice\4_3_2025\URL Shortener"/>
+			<item value="C:\Practice\3_3_2025\MarkdownApp\MarkdownApp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

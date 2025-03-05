@@ -1,0 +1,11 @@
+package com.example.URL.Shortener.service;
+
+import com.example.URL.Shortener.bean.URLBean;
+
+public interface URLShortenerService {
+    public  URLBean saveUrlDetail(URLBean bean);
+    public  URLBean getUrlDetailById(Integer id);
+    public URLBean updateUrlDetial(URLBean bean);
+    public URLBean deleteUrlDetail(String url);
+    
+}

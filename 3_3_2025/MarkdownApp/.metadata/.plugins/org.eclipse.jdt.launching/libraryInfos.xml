@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64" version="1.8.0_402-402">
+        <bootpath>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\ext"/>
+            <entry path="C:\windows\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files\openlogic-openjdk-8u402-b06-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\vikas.bhadu\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre" version="23.0.1"/>
+    <libraryInfo home="C:\Users\vikas.bhadu\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700" version="23.0.1">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+</libraryInfos>

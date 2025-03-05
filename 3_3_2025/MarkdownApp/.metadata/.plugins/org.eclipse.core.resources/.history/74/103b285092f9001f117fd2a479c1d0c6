@@ -1,0 +1,99 @@
+package com.example.URL.Shortener.dao;
+
+
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.URL.Shortener.bean.URLBean;
+import com.example.URL.Shortener.entity.URLEntity;
+
+@Repository
+public class URLDAOWrapper {
+	@Autowired
+	URLDAO urlDAO;
+
+	// create
+	public URLBean saveEntity(URLBean bean) throws Exception {
+		/// if this url is already shorten they we don't have to shorten it
+		   URLEntity serach_url=urlDAO.findByUrl(bean.getUrl());
+		   if(search_url!=null)
+			   return entityToBean(search_url);
+			URLEntity entity = urlDAO.save(beanToEntity(bean));
+		System.out.println("ENTITY:" + entity);
+		return entityToBean(entity);
+	}
+
+	// retrieval
+	@Transactional
+	public URLBean getEntityById(Integer id) throws Exception {
+
+		URLEntity entity = urlDAO.findById(id);
+		incrementAccessCode(entity);
+		return entityToBean(entity);
+	}
+
+	// update original url
+	@Transactional
+	public URLBean updateEntityByUrl(URLBean bean) throws Exception {
+
+		URLEntity entity = urlDAO.findByShortCode(bean.getShortCode());
+		System.out.println("ENTITY:"+entity);
+		if (entity != null) {
+			entity.setShortCode(bean.getShortCode());
+			entity.setUpdatedAt(bean.getUpdatedAt());
+			entity.setUrl(bean.getUrl());
+			urlDAO.save(entity);
+			return entityToBean(entity);
+		} else
+			return null;
+	}
+
+	// update--->increment access code
+	public void incrementAccessCode(URLEntity entity) throws Exception {
+		try {
+			entity.setAccessCount(entity.getAccessCount() + 1);
+			urlDAO.save(entity);
+		} catch (Exception e) {
+
+		}
+	}
+
+	// delete
+	@Transactional
+	public Integer deleteEntity(Integer id) throws Exception {
+		System.out.println("ID:"+id);
+		int hit = urlDAO.deleteFromId(id);
+		return hit;
+	}
+
+	// last inserted id
+	public Integer getLastInsertedId() {
+
+		try
+		{Integer last_id = urlDAO.findLastInsertedId();
+		
+		return last_id;
+		}
+		catch(Exception e)
+		{
+			return null;
+		}
+	}
+
+	public URLEntity beanToEntity(URLBean bean) {
+		URLEntity entity = new URLEntity();
+		BeanUtils.copyProperties(bean, entity);
+		return entity;
+	}
+	
+
+	public URLBean entityToBean(URLEntity entity) {
+		URLBean bean = new URLBean();
+		BeanUtils.copyProperties(entity, bean);
+		return bean;
+	}
+
+}

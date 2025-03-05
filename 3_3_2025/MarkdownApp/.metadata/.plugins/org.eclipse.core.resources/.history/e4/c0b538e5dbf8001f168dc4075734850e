@@ -1,0 +1,63 @@
+package com.example.URL.Shortener.dao;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.URL.Shortener.bean.URLBean;
+import com.example.URL.Shortener.entity.URLEntity;
+
+@Repository
+public class URLDAOWrapper {
+	@Autowired
+	URLDAO urlDAO;
+
+	// create
+	public URLBean saveEntity(URLBean bean) {
+		try {
+			urlDAO.save(beanToEntity(bean));
+			return bean;
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
+	// retrieval
+	public URLBean getEntityById(Integer id) {
+		URLEntity entity = urlDAO.findById(id);
+		return entityToBean(entity);
+	}
+
+	// update
+	public URLBean updateEntity(URLBean bean) {
+		int hit = urlDAO.updateUrl(bean.getUrl());
+		if (hit != 0) {
+			return bean;
+		} else {
+			return null;
+		}
+	}
+
+	// delete
+	public Integer deleteEntity(Integer id) {
+		int hit = urlDAO.deleteById(id)
+		return hit;
+	}
+
+	// last inserted id
+	public Integer getLastInsertedId() {
+		return urlDAO.findLastInsertedId();
+	}
+
+	public URLEntity beanToEntity(URLBean bean) {
+		URLEntity entity = new URLEntity();
+		BeanUtils.copyProperties(bean, entity);
+		return entity;
+	}
+
+	public URLBean entityToBean(URLEntity entity) {
+		URLBean bean = new URLBean();
+		BeanUtils.copyProperties(entity, bean);
+		return bean;
+	}
+}

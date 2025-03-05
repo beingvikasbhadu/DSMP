@@ -1,0 +1,5 @@
+package com.example.URL.Shortener.base62;
+
+public class Base62 {
+
+}
